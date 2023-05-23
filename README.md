@@ -1,6 +1,6 @@
 # Simple telegram bot tools by iqbal
 
-## instalasi
+## Instalasi
 
 paket ini berisi fungsi sendMessage dan fungsi sendPhoto dari bot telegram
 
@@ -29,3 +29,29 @@ TELEGRAM_BOT_TOKEN="TELEGRAM_BOT_ANDA"
 TELEGRAM_DEFAULT_CHAT_ID="CHAT_ID"
 TELEGRAM_WEBHOOK_URL="WEBHOOK URL"
 ```
+
+## Penggunaan
+
+### Menggunakan package
+
+telegramtools ini adalah sebuah trait gunakan use TelegramTrait didalam class yang anda buat
+
+```
+use Iqbalfarhan08\Telegramtools\Trait\TelegramTrait;
+
+class YourController extends Controller
+{
+    use TelegramTrait
+    ...
+}
+```
+
+### Mengatur webhook
+
+```
+$
+```
+
+### Mengatur setId
+
+### Mengirim pesan text
