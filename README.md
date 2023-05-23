@@ -20,7 +20,7 @@ Jalankan fungsi publish config seperti berikut ini di terminal anda
 php artisan vendor:publish --provider="Iqbalfarhan08\Telegramtools\TelegramToolServiceProvider"
 ```
 
-### Configurasi environtment
+### Configurasi environment
 
 Tambahkan key ini di file .env untuk konfigurasi bot anda;
 
