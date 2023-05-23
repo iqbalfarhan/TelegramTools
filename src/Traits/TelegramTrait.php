@@ -34,12 +34,17 @@ trait TelegramTrait
 
     public function sendPhoto($photo, $caption = null)
     {
-        return $this->sendParsed('sendMessage', [
+        $data = [
             'chat_id' => $this->chatId,
             'parse_mode' => $this->parseMode,
             'photo' => $photo,
-            'caption' => $caption,
-        ]);
+        ];
+
+        if ($caption != null) {
+            $data['caption'] = $caption;
+        };
+
+        return $this->sendParsed('sendMessage', $data);
     }
 
     public function sendParsed($method, $param = null)
