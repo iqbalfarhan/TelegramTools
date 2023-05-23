@@ -1,6 +1,6 @@
 <?php
 
-namespace Iqbalfarhan08\Telegramtools;
+namespace Iqbalfarhan08\Telegramtools\Traits;
 
 trait TelegramTrait
 {
