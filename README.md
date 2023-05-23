@@ -2,7 +2,7 @@
 
 ## Instalasi
 
-Paket ini berisi fungsi sendMessage dan fungsi sendPhoto dari bot telegram
+Paket ini berisi fungsi sendMessage dan fungsi sendPhoto dari bot telegram. Paket ini untuk pengguna laravel 8 keatas
 
 ### Instalasi paket
 
