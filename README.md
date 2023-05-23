@@ -20,12 +20,14 @@ Jalankan fungsi publish config seperti berikut ini di terminal kamu
 php artisan vendor:publish --provider="Iqbalfarhan08\Telegramtools\TelegramToolServiceProvider"
 ```
 
+dari command ini akan ada file baru didalam fonder config kamu dengan nama "telegramtools.php" berisi konfigurasi file yang bisa kamu ubah sesuai dengan kebutuhan.
+
 ### Configurasi environment
 
 Tambahkan key ini di file .env untuk konfigurasi bot kamu;
 
 ```
-TELEGRAM_BOT_TOKEN="TELEGRAM_BOT_kamu"
+TELEGRAM_BOT_TOKEN="TELEGRAM_BOT_KAMU"
 TELEGRAM_DEFAULT_CHAT_ID="CHAT_ID"
 TELEGRAM_WEBHOOK_URL="WEBHOOK URL"
 ```
