@@ -69,9 +69,9 @@ return $this->sendMessage($text);
 
 Parameter pertama sendMessage bersifat required (harus diisi) dan string.
 
-### Mengirim pesan Photo
+### Mengirim pesan gambar
 
-Untuk mengirimkan pesan berupa photo kamu bisa menggunakan method sebagai berikut
+Untuk mengirimkan pesan berupa gambar kamu bisa menggunakan method sebagai berikut
 
 ```
 $photo = "https://cdn-icons-png.flaticon.com/512/282/282100.png";
