@@ -44,7 +44,7 @@ trait TelegramTrait
             $data['caption'] = $caption;
         };
 
-        return $this->sendParsed('sendMessage', $data);
+        return $this->sendParsed('sendPhoto', $data);
     }
 
     public function sendParsed($method, $param = null)
@@ -53,7 +53,7 @@ trait TelegramTrait
             $url = config('services.telegram.link') . $method;
         } else {
             $param = http_build_query($param);
-            echo $url = config('services.telegram.link') . $method . "?" . $param;
+            $url = config('services.telegram.link') . $method . "?" . $param;
         }
 
         return file_get_contents($url);
