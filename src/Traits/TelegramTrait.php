@@ -54,13 +54,14 @@ trait TelegramTrait
         return file_get_contents($url);
     }
 
-    public function setWebhook($url)
+    public function setWebhook($url = null)
     {
+        $alamat = $url ?? config('telegramtools.webhook_url');
         $this->sendParsed('setWebhook', [
-            'url' => $url,
+            'url' => $alamat,
             'drop_pending_updates' => true
         ]);
 
-        return response()->json(['done' => true, 'webhookUrl' => $url], 201);
+        return response()->json(['done' => true, 'webhookUrl' => $alamat], 201);
     }
 }

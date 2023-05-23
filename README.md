@@ -48,9 +48,31 @@ class YourController extends Controller
 
 ### Mengatur webhook
 
+untuk mengatur webhook anda bisa membuat route tersendiri baik di web.php atau di api.php.
+
 ```
-$
+// file api.php
+Route::get('telegram/setWebhook', [API\TelegramController::class, 'setWebhook']);
+
+// file API\TelegramController.php
+use TelegramTrait;
+
+// dengan url
+public function setWebhook(){
+    $url = "https://https://domain.com/api/telegram/";
+    $this->setWebHook($url);
+}
+
+// atau tanpa url
+public function setWebhook(){
+    $this->setWebHook();
+}
+
 ```
+
+kemudian akses route tersebut di https://domain.com/api/telegram/setWebhook.
+
+apabila tidak memasukkan $url wehbook akan diisi sesuai dengan value TELEGRAM_WEBHOOK_URL di file .env
 
 ### Mengatur Telegram Chat Id
 
@@ -75,7 +97,7 @@ parameter pertama sendMessage bersifat required (harus diisi) dan string.
 
 ### Mengirim pesan Photo
 
-untuk mengirimkan pesan text anda bisa menggunakan method sebagai berikut
+untuk mengirimkan pesan berupa photo anda bisa menggunakan method sebagai berikut
 
 ```
 $photo = "https://cdn-icons-png.flaticon.com/512/282/282100.png";
