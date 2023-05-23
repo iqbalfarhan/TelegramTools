@@ -17,7 +17,7 @@ composer require iqbalfarhan08/telegramtools
 Jalankan fungsi publish config seperti berikut ini di terminal anda
 
 ```
-php artisan vendor:publish --provider="Iqbalfarhan08\Telegramtools\TelegramToolServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Iqbalfarhan08\Telegramtools\TelegramToolServiceProvider" --tag="config --force"
 ```
 
 ### Configurasi environtment
