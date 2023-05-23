@@ -2,8 +2,6 @@
 
 namespace Iqbalfarhan08\Telegramtools;
 
-use Illuminate\Config\Repository;
-
 trait TelegramTrait
 {
     public $chatId;

@@ -14,5 +14,8 @@
 			"name": "Iqbal Farhan",
 			"email": "iqbalfarhan1996@gmail.com"
 		}
-	]
+	],
+	"require": {
+		"illuminate/config": "^11.0@dev"
+	}
 }

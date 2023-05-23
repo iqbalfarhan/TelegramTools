@@ -6,17 +6,51 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit0e2acf582492fb43fdf688bb7fb8bce8
 {
+    public static $files = array (
+        '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'Psr\\SimpleCache\\' => 16,
+            'Psr\\Container\\' => 14,
+        ),
         'I' => 
         array (
             'Iqbalfarhan08\\Telegramtools\\' => 28,
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Config\\' => 18,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
         'Iqbalfarhan08\\Telegramtools\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Illuminate\\Support\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/conditionable',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
+            2 => __DIR__ . '/..' . '/illuminate/collections',
+        ),
+        'Illuminate\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
+        ),
+        'Illuminate\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/config',
         ),
     );
 

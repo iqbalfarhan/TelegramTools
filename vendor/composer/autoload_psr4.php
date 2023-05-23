@@ -6,5 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
+    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Iqbalfarhan08\\Telegramtools\\' => array($baseDir . '/src'),
+    'Illuminate\\Support\\' => array($vendorDir . '/illuminate/conditionable', $vendorDir . '/illuminate/macroable', $vendorDir . '/illuminate/collections'),
+    'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
+    'Illuminate\\Config\\' => array($vendorDir . '/illuminate/config'),
 );
