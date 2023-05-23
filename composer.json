@@ -15,5 +15,15 @@
 			"name": "Iqbal Farhan",
 			"email": "iqbalfarhan1996@gmail.com"
 		}
-	]
+	],
+	"extra": {
+		"laravel": {
+			"providers": [
+				"\\Iqbalfarhan08\\Telegramtools\\TelegramToolServiceProvider"
+			],
+			"aliases": {
+				"Telegramtools": "Iqbalfarhan08\\Telegramtools\\Traits\\TelegramTrait"
+			}
+		}
+	}
 }
