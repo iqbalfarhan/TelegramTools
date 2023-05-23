@@ -1,5 +1,6 @@
 {
 	"name": "iqbalfarhan08/telegramtools",
+	"version": "v1.0.0",
 	"description": "simple telegram bot features",
 	"type": "library",
 	"license": "MIT",
