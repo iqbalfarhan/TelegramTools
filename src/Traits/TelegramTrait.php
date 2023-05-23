@@ -9,8 +9,8 @@ trait TelegramTrait
 
     public function __construct()
     {
-        $this->chatId = config('services.telegram.default_chat_id', '608751286');
-        $this->parseMode = config('services.telegram.parse_mode', 'html');
+        $this->chatId = config('telegramtools.default_chat_id', '608751286');
+        $this->parseMode = config('telegramtools.parse_mode', 'html');
     }
 
     public function setChatId($chat_id)

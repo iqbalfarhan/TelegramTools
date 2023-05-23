@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"autoload": {
 		"psr-4": {
-			"Iqbalfarhan08\\Telegramtools\\": "src/"
+			"Iqbalfarhan08\\Telegramtools\\": "src/",
+			"Illuminate\\Config\\": ""
 		}
 	},
 	"minimum-stability": "dev",
@@ -14,8 +15,5 @@
 			"name": "Iqbal Farhan",
 			"email": "iqbalfarhan1996@gmail.com"
 		}
-	],
-	"require": {
-		"illuminate/config": "^11.0@dev"
-	}
+	]
 }
