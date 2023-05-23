@@ -61,3 +61,31 @@ $this->setChatId("chat id anda")
 ```
 
 ### Mengirim pesan text
+
+untuk mengirimkan pesan text anda bisa menggunakan method sebagai berikut
+
+```
+$text = "hallo gais apkabs?";
+
+$this->setChatId($chat_id);
+return $this->sendMessage($text);
+```
+
+parameter pertama sendMessage bersifat required (harus diisi) dan string.
+
+### Mengirim pesan Photo
+
+untuk mengirimkan pesan text anda bisa menggunakan method sebagai berikut
+
+```
+$photo = "https://cdn-icons-png.flaticon.com/512/282/282100.png";
+$caption = "gambar link";
+
+$this->setChatId($chat_id);
+return $this->sendPhoto($photo, $caption);
+```
+
+sendPhoto memiliki 2 parameter yaitu:
+
+- $photo : bersifat required (harus diisi) dan string.
+- $caption : optional (tidak harus diisi) dan string.
