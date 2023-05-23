@@ -1,0 +1,18 @@
+{
+	"name": "iqbalfarhan08/telegramtools",
+	"description": "simple telegram bot features",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Iqbalfarhan08\\Telegramtools\\": "src/"
+		}
+	},
+	"minimum-stability": "dev",
+	"authors": [
+		{
+			"name": "Iqbal Farhan",
+			"email": "iqbalfarhan1996@gmail.com"
+		}
+	]
+}
