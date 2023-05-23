@@ -53,7 +53,7 @@ trait TelegramTrait
             $url = config('services.telegram.link') . $method;
         } else {
             $param = http_build_query($param);
-            $url = config('services.telegram.link') . $method . "?" . $param;
+            echo $url = config('services.telegram.link') . $method . "?" . $param;
         }
 
         return file_get_contents($url);
