@@ -52,7 +52,7 @@ class YourController extends Controller
 $
 ```
 
-### Mengatur setId
+### Mengatur Telegram Chat Id
 
 atur chat id sebelum mengirim pesan text atau pesan gambar. chat id bisa untuk perorangan atau group. chat id berupa angka dan bisa anda dapatkan dari banyak bot ditelegram kemudian set chat id anda dengan cara
 
