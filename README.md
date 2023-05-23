@@ -1,5 +1,7 @@
 # Simple telegram bot tools by iqbal
 
+## instalasi
+
 paket ini berisi fungsi sendMessage dan fungsi sendPhoto dari bot telegram
 
 ### Instalasi paket
@@ -15,7 +17,7 @@ composer require iqbalfarhan08/telegramtools
 Jalankan fungsi publish config seperti berikut ini di terminal anda
 
 ```
-php artisan vendor:publish
+php artisan vendor:publish --provider="Iqbalfarhan08\Telegramtools\TelegramToolServiceProvider" --tag="config"
 ```
 
 ### Configurasi environtment

@@ -4,7 +4,7 @@ namespace Spatie\Permission;
 
 use Illuminate\Support\ServiceProvider;
 
-class TelegramToolServideProvider extends ServiceProvider
+class TelegramToolServiceProvider extends ServiceProvider
 {
     public function boot()
     {
