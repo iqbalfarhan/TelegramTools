@@ -10,7 +10,7 @@ class TelegramToolServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/config/telegramtools.php' => config_path('telegramtools.php'),
-        ], 'telegramtool_config');
+        ], 'config');
     }
     
 }
