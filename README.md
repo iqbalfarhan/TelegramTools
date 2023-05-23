@@ -46,37 +46,6 @@ class YourController extends Controller
 }
 ```
 
-### Mengatur webhook
-
-untuk mengatur webhook kamu bisa membuat route tersendiri baik di web.php atau di api.php.
-
-```
-// file api.php
-Route::get('telegram/setWebhook', [API\TelegramController::class, 'setWebhook']);
-
-
-// file API\TelegramController.php
-use TelegramTrait;
-
-
-// dengan url
-public function setWebhook(){
-    $url = "https://https://domain.com/api/telegram/";
-    $this->setWebHook($url);
-}
-
-
-// atau tanpa url
-public function setWebhook(){
-    $this->setWebHook();
-}
-
-```
-
-Kemudian akses route tersebut di https://domain.com/api/telegram/setWebhook.
-
-Apabila tidak memasukkan $url wehbook akan diisi sesuai dengan value TELEGRAM_WEBHOOK_URL di file .env
-
 ### Mengatur Telegram Chat Id
 
 Atur chat id sebelum mengirim pesan text atau pesan gambar. chat id bisa untuk perorangan atau group. chat id berupa angka dan bisa kamu dapatkan dari banyak bot ditelegram kemudian set chat id kamu dengan cara:
@@ -114,3 +83,86 @@ Method sendPhoto memiliki 2 parameter yaitu:
 
 - $photo : bersifat required (harus diisi) dan string.
 - $caption : optional (tidak harus diisi) dan string.
+
+## Menerima post dari telegram
+
+### Mengatur webhook
+
+Untuk mengatur webhook kamu bisa membuat route tersendiri baik di web.php atau di api.php.
+
+```
+// file api.php
+Route::get('telegram/setWebhook', [API\TelegramController::class, 'setWebhook']);
+
+
+// file API\TelegramController.php
+use TelegramTrait;
+
+
+// dengan url
+public function setWebhook(){
+    $url = "https://https://domain.com/api/telegram/";
+    $this->setWebHook($url);
+}
+
+
+// atau tanpa url
+public function setWebhook(){
+    $this->setWebHook();
+}
+
+```
+
+Kemudian akses route tersebut di https://domain.com/api/telegram/setWebhook.
+
+Apabila tidak memasukkan $url wehbook akan diisi sesuai dengan value TELEGRAM_WEBHOOK_URL di file .env
+
+## Membuat controller untuk mengeksekusi post dari telegram
+
+Buatlah sebuah controller untuk action telegram kamu. sebagai contoh buat file API\TelegramController dengan menjalankan
+
+```
+php artisan make:controller API/TelegramController
+```
+
+kemudian buat fungsi index untuk sebagai tujuan post jangan lupa untuk membuat route webhook telegram kamu.
+
+```
+// file api.php
+// webhook https://domain.com/api/telegram
+Route::post('telegram', [API\TelegramController::class, 'index']);
+
+
+// file API TelegramController.php
+namespace App\Http\Controllers\API;
+
+use App\Http\Controllers\Controller;
+use App\Traits\TelegramTrait;
+use Illuminate\Http\Request;
+
+class TelegramController extends Controller
+{
+    use TelegramTrait;
+
+    public function index()
+    {
+        $req = json_decode(file_get_contents("php://input"), TRUE);
+
+        $chat_id = $req['message']['chat']['id'];
+
+        $this->setChatId($chat_id);
+        return $this->sendMessage("silakan ini dia Telegram ID kamu <b>{$chat_id}</b>");
+
+    }
+
+    public function resetWebhook()
+    {
+        return $this->setWebhook();
+    }
+}
+
+```
+
+## Penutup
+
+ini masih versi awal dan kemungkinan akan ada optimalisasi di paket ini.
