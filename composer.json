@@ -4,6 +4,9 @@
 	"description": "simple telegram bot features",
 	"type": "library",
 	"license": "MIT",
+	"require": {
+		"php": ">=7.2"
+	},
 	"autoload": {
 		"psr-4": {
 			"Iqbalfarhan08\\Telegramtools\\": "src/",
