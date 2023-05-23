@@ -8,14 +8,19 @@ class TelegramToolServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/config/telegramtools.php' => config_path('telegramtools.php'),
-        ], 'config');
+        $this->publishConfig();
     }
 
     public function register()
     {
        //
+    }
+
+    protected function publishConfig()
+    {
+        $this->publishes([
+            __DIR__.'/config/telegramtools.php' => config_path('telegramtools.php'),
+        ], 'config');
     }
     
 }
