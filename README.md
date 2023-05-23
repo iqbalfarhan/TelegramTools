@@ -2,13 +2,19 @@
 
 ## Instalasi
 
-jalankan fungsi berikut ini untuk install
-`composer require iqbalfarhan08/telegramtools`
+### jalankan fungsi berikut ini untuk install
 
-jalankan fungsi publish config
-`php artisan vendor:publish`
+```
+composer require iqbalfarhan08/telegramtools
+```
 
-tambahkan ke .env
+### jalankan fungsi publish config
+
+```
+php artisan vendor:publish
+```
+
+### tambahkan ke .env
 
 ```
 TELEGRAM_BOT_TOKEN="TELEGRAM_BOT_ANDA"
