@@ -2,8 +2,11 @@
 
 ## Instalasi
 
-jalankan fungsi berikut ini
+jalankan fungsi berikut ini untuk install
 `composer require iqbalfarhan08/telegramtools`
+
+jalankan fungsi publish config
+`php artisan vendor:publish`
 
 tambahkan ke .env
 
