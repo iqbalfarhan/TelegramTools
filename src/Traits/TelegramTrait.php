@@ -50,10 +50,10 @@ trait TelegramTrait
     public function sendParsed($method, $param = null)
     {
         if ($param == null) {
-            $url = config('services.telegram.link') . $method;
+            $url = config('telegramtools.link') . $method;
         } else {
             $param = http_build_query($param);
-            $url = config('services.telegram.link') . $method . "?" . $param;
+            $url = config('telegramtools.link') . $method . "?" . $param;
         }
 
         return file_get_contents($url);
